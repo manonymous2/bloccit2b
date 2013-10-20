@@ -31,3 +31,4 @@ u.update_attributes(email: 'orrett.davis@gmail.com', password: 'reddog', passwor
 puts "Seed Finished"
 puts "#{Post.count} post created"
 puts "#{Comment.count} comments created"
+puts "#{User.count} users created"
