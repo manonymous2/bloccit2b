@@ -11,12 +11,11 @@ class User < ActiveRecord::Base
 
 
   #CanCan roles
-  ROLES = %w[member, moderator, admin]
+  ROLES = %w[member moderator admin]
   def role?(base_role)
   	role.nil? ? false : ROLES.index(base_role.to_s) <= ROLES.index(role)
   end
   
-
   private 
   
   def set_member

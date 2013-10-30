@@ -15,9 +15,11 @@
 		</div>
 		<% end %>
 	</div>
+
 	<div class="span-4">
 		<% if can? :create, Topic %>
-		<%= link_to "New Topic", new_topic_path, class: 'btn btn-large btn-block'%>
+		<%= link_to "New Topic", new_topic_path, class: 'btn btn-large btn-block' %>
 		<% end %>
 	</div>
+
 </div>

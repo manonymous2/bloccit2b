@@ -21,7 +21,7 @@
 
 		<div class="control-group">
 			<%= f.label :description, class: 'control-label'%>
-			<div class="controls">
+			<div>
 				<%= f.text_area :description, rows: 8 %>
 			</div>
 		</div>
@@ -29,8 +29,8 @@
 		<div class="control-group">
 			<div class="controls">
 				<%= f.label :public, class: 'checkbox' do %>
-				<%= f.check_box :public %> Public topic
-				<% end %>
+            			<%= f.check_box :public %> Public topic
+          			<% end %>
 			</div>
 		</div>
 
