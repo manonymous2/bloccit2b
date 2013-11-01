@@ -35,6 +35,11 @@ gem 'devise'
 gem 'cancan'
 gem 'annotate'
 gem 'redcarpet'
+gem 'mini_magick', '~> 3.5.0'
+gem 'carrierwave'
+gem 'fog'
+gem 'figaro'
+gem 'unf'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
