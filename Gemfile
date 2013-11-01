@@ -7,7 +7,7 @@ gem 'rails', '3.2.13'
 
 group :development do
   gem 'sqlite3'
-  gem 'better_errors'
+  #gem 'better_errors'
 end
 
 group :production do 
@@ -21,6 +21,7 @@ group :assets do
   gem 'sass-rails',   '~> 3.2.3'
   gem 'coffee-rails', '~> 3.2.1'
   gem 'bootstrap-sass', '~>2.3.1.0'
+  gem 'sass', '3.2.10'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
