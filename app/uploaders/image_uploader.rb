@@ -21,6 +21,7 @@ process :resize_to_fill => [300, 300]
 
   version :thumb do
     process :resize_to_fill => [50, 50]
+  end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
   # def default_url
