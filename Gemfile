@@ -41,6 +41,8 @@ gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
 gem 'unf'
+gem 'redcarpet'
+gem 'will_paginate'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
