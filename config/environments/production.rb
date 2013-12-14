@@ -66,5 +66,5 @@ Bloccit::Application.configure do
   # config.active_record.auto_explain_threshold_in_seconds = 0.5
 
   #http://odavis-bloccit.herokuapp.com/
-  config.action_mailer.default_url_options = { :host => 'odavis-bloccit.herokuapp.com'}
+  config.action_mailer.default_url_options = { :host => 'bloccit2b.herokuapp.com'}
 end
