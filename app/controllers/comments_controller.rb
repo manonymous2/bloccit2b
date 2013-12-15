@@ -2,13 +2,6 @@ class CommentsController < ApplicationController
 
 
 
-	def show    
-    @post  = Post.find(params[:id]) 
-    @topic = Topic.find(params[:topic_id])
-    @topic = Comments.find(params[:topic_id])
-  end
-
-
 	def create
 
 	@topic = Topic.find(params[:topic_id])
@@ -18,7 +11,6 @@ class CommentsController < ApplicationController
     @comment = current_user.comments.build(params[:comment])
     @comment.post = @post
     @new_comment = Comment.new
-  	@comments= Comments.new(params[:comments])
     authorize! :create, @comments message: "You need to be signed in to do that."
   	if @comments.save
   		flash[:notice] = "Comment was saved successfully"

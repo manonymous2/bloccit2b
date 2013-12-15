@@ -8,17 +8,12 @@
     </small>
 
       <small>
-      <%= image_tag(@post.user.image.tiny.url) if @post.user.image? %>
-      submitted <%= time_ago_in_words(@post.created_at) %> ago by 
-      <%= @post.user.name %>
+      <%#= image_tag(@post.user.image.tiny.url) if @post.user.image? %>
+      submitted <%#= time_ago_in_words(@post.created_at) %> ago by 
+      <%#= @post.user.name %>
     </small>  
 
-    <small>
-      <%= comment.user.name %> commented <%= time_ago_in_words(comment.created_at) %> ago
-      <% if can? :destroy, comment %>
-        | <%= link_to "Delete", comment_url_helper(comment), method: :delete, remote: true %>
-      <% end %>
-    </small>
+<%= render @comments %>
 
     <p><%= markdown @post.body %></p>
   </div>
@@ -29,5 +24,11 @@
     <% if can? :destroy, @post %>
       <%= link_to "Delete Post", [@topic, @post], method: :delete, class: 'btn btn-large btn-block btn-danger', confirm: 'Are you sure you want to delete this post?' %>
     <% end %>  
+
+    <%= render partial: 'comments/form', locals: { topic: @topic, post: @post, comment: @comment } %>
+
+    
   </div>
+    
+  
 </div>
