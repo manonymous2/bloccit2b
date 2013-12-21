@@ -9,12 +9,7 @@
       </ul>
     </div>
   <%end%>
-  <%= control_group_tag(comment.errors[:title]) do %>
-      <%= f.label :title, class: 'control-label' %>
-      <div class="controls">
-        <%= f.text_field :title %>
-      </div>
-  <%end%>
+
   <%= control_group_tag(comment.errors[:body]) do %>  
     <%= f.label :body, class: "control-label" %>
     <div class="controls">
