@@ -43,6 +43,7 @@ gem 'figaro'
 gem 'unf'
 gem 'redcarpet'
 gem 'will_paginate'
+gem 'omniauth-facebook'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
