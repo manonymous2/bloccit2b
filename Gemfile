@@ -2,12 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
 
+
 # Bundle edge Rails instead:
 # gem 'rails', :g
 
 group :development do
   gem 'sqlite3'
   #gem 'better_errors'
+  gem 'pry'
 end
 
 group :production do 

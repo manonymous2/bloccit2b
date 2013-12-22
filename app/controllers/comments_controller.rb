@@ -20,6 +20,7 @@ class CommentsController < ApplicationController
   		render :new 
   	end
   end
+end
 
 
     respond_with(@comment) do |f|

@@ -20,6 +20,9 @@ rand(4..10).times do
 	u.save
 
 
+end
+
+
 	rand(5..12).times do
 		topic = topics.first
 		p = u.posts.create(
@@ -27,15 +30,12 @@ rand(4..10).times do
 			title: Faker::Lorem.words(rand(1..10)).join(" "),
 			body: Faker::Lorem.paragraphs(rand(1..4)).join("\n"))
 			p.update_attribute(:created_at, Time.now - rand(600..31536000))
-
+            p.update_rank
 			topics.rotate!
 
-		rand(3..7).times do 
-			p.comments.create(
-				body: Faker::Lorem.paragraphs(rand(1.2)).join("\n"))
 	end
 end
-end
+
 
 post_count = Post.count
 User.all.each do |user|
@@ -44,6 +44,7 @@ User.all.each do |user|
       c = user.comments.create(
         body: Faker::Lorem.paragraphs(rand(1..2)).join("\n"),
         post: p)
+      #break here 
       c.update_attribute(:created_at, Time.now - rand(600..31536000))
     end
 end
