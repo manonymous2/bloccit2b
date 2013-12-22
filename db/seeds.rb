@@ -20,8 +20,6 @@ rand(4..10).times do
 	u.save
 
 
-end
-
 
 	rand(5..12).times do
 		topic = topics.first
@@ -33,8 +31,8 @@ end
             p.update_rank
 			topics.rotate!
 
-	end
 end
+ end
 
 
 post_count = Post.count
