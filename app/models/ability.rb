@@ -9,8 +9,9 @@ class Ability
     if user.role? :member
       can :manage, Post, :user_id => user.id
       can :manage, Comment, :user_id => user.id
+      can :manage, Favorite, user_id: user.id
       can :read, Topic
-       can :create, Vote
+      can :create, Vote
     end
 
     # Moderators can delete any post
