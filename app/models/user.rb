@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          :omniauthable, :omniauth_providers => [:facebook]
 
   # Setup accessible (or protected) attributes for your model
-  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :avatar, :provider, :uid, :email_favorites
+  attr_accessible :name, :email, :password, :password_confirmation, :remember_me, :avatar, :provider, :uid, :email_favorites, :avatar_cache
   has_many :posts 
   has_many :comments
   has_many :votes, dependent: :destroy
