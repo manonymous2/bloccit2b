@@ -9,12 +9,9 @@
 		<p class="lead"><%= @topic.description %></p>
 		 <%= render @posts %>
     	<%= will_paginate @posts %>
+    	 <%= render partial: 'comments/comment', collection: @comments %>
   	</div>
-	<div class="span4">
-		<% if can? :create, Post %> 
-			<%= link_to "New Post", new_topic_post_path(@topic), class: "btn btn-large btn-block" %>
-		<%end%>
-	</div>
+
 
 	<div class="span4">
     <% if can? :create, Post %>
