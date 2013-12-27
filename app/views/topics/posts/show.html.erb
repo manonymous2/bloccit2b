@@ -1,6 +1,6 @@
 <% if can? :create, Comment %>
   <hr/>
-
+  <h2 class='js-comments-count'><%= @comments.count %> Comments</h2>
   <a href="#" class="js-show-hide" data-selector="js-new-comment">Add Comment</a>
   <br/>
   <div class="js-new-comment hide">
